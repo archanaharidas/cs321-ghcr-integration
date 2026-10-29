@@ -1,0 +1,20 @@
+
+services:
+  subsystem-a:
+    image: ghcr.io/archanaharidas/cs321-azure-container-test:latest
+    platform: linux/amd64
+    ports:
+      - "18080:8080"
+    networks:
+      - cs321-network
+
+  subsystem-b:
+    image: ghcr.io/archanaharidas/cs321-ghcr-service-b@sha256:0fba9503c5abd8d2ae6fd0d0d5315d0d12669af68429abe88e402cd3e89d79df
+    ports:
+      - "18081:8080"
+    networks:
+      - cs321-network
+
+networks:
+  cs321-network:
+    driver: bridge
