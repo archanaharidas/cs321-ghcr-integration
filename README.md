@@ -1,5 +1,3 @@
-# cs321-ghcr-integration
-
 # CS 321 — GHCR and Docker Compose Integration Experiment
 
 ## Research Objective
